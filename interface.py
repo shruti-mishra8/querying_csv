@@ -88,7 +88,6 @@ with tab2:
                         # Update the message placeholder
                         message_placeholder.markdown(full_response)
 
-                    # Ensure the entire output is displayed
                     message_placeholder.markdown(full_response)
             except Exception as e:
                 st.error(f"Error: {e}")

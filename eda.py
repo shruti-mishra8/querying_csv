@@ -22,7 +22,7 @@ class QueryEda:
             f"Determine the extent of missing values of {user_eda_column}"
         )
 
-        # Extract the relevant part of the response, assuming it's stored in a key called 'output'
+        # Extract the relevant part of the response
         summary_text = summary_statistics.get("output", "")
         outliers_text = outliers.get("output", "")
         missing_values_text = missing_values.get("output", "")

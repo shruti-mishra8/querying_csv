@@ -8,7 +8,6 @@ from langchain_experimental.agents import create_pandas_dataframe_agent
 
 
 _ = load_dotenv(find_dotenv())
-api_key = os.getenv("ANTHROPIC_API_KEY")
 
 
 class CsvAgent:
@@ -27,8 +26,8 @@ class CsvAgent:
             self.llm,
             df,
             verbose=True,
-            agent_type="tool-calling",  # Adjust the agent_type accordingly
+            agent_type="tool-calling",
             agent_executor_kwargs={"handle_parsing_errors": True},
-            allow_dangerous_code=True,  # Ensure you have considered the security implications
+            allow_dangerous_code=True,
         )
         return agent_executor
